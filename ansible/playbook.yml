@@ -3,14 +3,10 @@
   become: yes
 
   tasks:
-    - name: Build Maven Project
-      shell: |
-        cd /var/snap/jenkins/5022/workspace/ansiblewebapp-CICD
-        mvn clean package
 
     - name: Copy WAR file to Tomcat
       shell: |
-        cp /var/snap/jenkins/5022/workspace/ansiblewebapp-CICD/target/*.war /opt/tomcat/webapps/
+        cp /var/lib/jenkins/workspace/MavenAnsible/target/*.war /opt/tomcat/webapps/
 
     - name: Restart Tomcat
       shell: |
