@@ -6,7 +6,7 @@
 
     - name: Copy WAR file to Tomcat
       shell: |
-        cp /var/lib/jenkins/workspace/MavenAnsible/target/*.war /opt/tomcat/webapps/
+        cp /var/snap/jenkins/5022/workspace/MavenAnsible/target/*.war /opt/tomcat/webapps/
 
     - name: Restart Tomcat
       shell: |
